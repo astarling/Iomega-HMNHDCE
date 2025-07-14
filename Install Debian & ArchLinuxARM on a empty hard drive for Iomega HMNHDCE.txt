@@ -29,7 +29,7 @@ Procedure:
 			./mkgptdisk.sh /dev/sdX #[if you want msdos part, command: ./mkdosdisk.sh /dev/sdX]
 	[Option]:Create second partition (user data partition) on HDD and format it;
 		command:
-			parted /dev/sdX mkpart primary 21.5GB -1s
+			parted /dev/sdX mkpart primary ext3 21.5GB 100%
 			mkfs.ext3 /dev/sdX2
 	Write boot sectors data to HDD;
 		command:
